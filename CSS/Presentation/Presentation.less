@@ -1,0 +1,93 @@
+﻿body, div, ul, a, li,img,span {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    zoom: 1;
+
+    &:after {
+        display: block;
+        height: 0;
+        content: "";
+        clear: both;
+    }
+}
+
+body {
+    div#wrapper {
+        width: 960px;
+        margin: 15px;
+
+        div {
+            font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+            font-size: 16px;
+            div.holder {
+				padding-bottom:4px;
+				float:left;
+				    border: 10px solid #cccccc;
+                    border-radius: 5px;
+					border-right:5px solid #cccccc;
+					border-top-right-radius:0px;
+					border-bottom-right-radius:0px;	
+					background-color:#ccc;
+                img {	
+						
+					display:block;
+					width:550px;
+					height:415px;
+					position:relative;
+                border-radius: 5px;
+
+                }
+            }
+
+            div.playlist {
+                ul {
+					padding:10px 5px;
+					padding-left:0px;
+                    float: left;
+                    position: relative;
+                    .clearfix;
+                    border: 5px solid #cccccc;
+                    background-color: #cccccc;
+                    border-radius: 5px;
+					border-top-left-radius:0px;
+					border-bottom-left-radius:0px;
+					padding-bottom:15px;
+                    li {
+						margin-bottom:5px;
+                        list-style-type: none;
+                        border-bottom: 1px solid black;
+
+						&:last-of-type{
+							
+						}
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-weight: bold;
+							
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        img {
+							display:block;
+							border-radius:10px;						
+							margin:0 auto;
+                        }
+
+                        span {
+							padding:0 5px;
+							padding-left:10px;
+							padding-bottom:5px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

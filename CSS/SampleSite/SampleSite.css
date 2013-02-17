@@ -1,0 +1,154 @@
+/*mixins*/
+/*classes*/
+.clearfix, body header #header-container, body nav, body nav > ul, body nav > ul > li, body nav > ul > li ul.sub-nav-list, body footer {
+  zoom: 1; }
+  .clearfix:after, body header #header-container:after, body nav:after, body nav > ul:after, body nav > ul > li:after, body nav > ul > li ul.sub-nav-list:after, body footer:after {
+    display: block;
+    height: 0;
+    content: "";
+    clear: both; }
+
+.pos {
+  display: inline;
+  position: relative;
+  float: left; }
+
+.size_thumb {
+  width: 180px;
+  height: 120px; }
+
+.size_full {
+  width: 700px;
+  height: 500px; }
+
+body {
+  background: #9215f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9215f2 80%, #d191fc 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #9215f2), color-stop(100%, #d191fc));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #9215f2 80%, #d191fc 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #9215f2 80%, #d191fc 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #9215f2 80%, #d191fc 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #9215f2 80%, #d191fc 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$fromColor', endColorstr='$toColor',GradientType=0 );
+  /* IE6-9 */
+  background-repeat: no-repeat; }
+  body header #header-container #logo-container {
+    float: left;
+    position: relative; }
+  body header #header-container #reg-form-container {
+    float: right;
+    position: relative;
+    right: 5%;
+    top: 50%; }
+    body header #header-container #reg-form-container label {
+      color: white; }
+    body header #header-container #reg-form-container input {
+      background-color: #b35ef3;
+      border-radius: 10px;
+      border: 1px solid #603382;
+      margin: 3px; }
+    body header #header-container #reg-form-container button {
+      background-color: inherit;
+      border-radius: 10px;
+      color: #FFF; }
+      body header #header-container #reg-form-container button:hover {
+        background-color: #b35ef3; }
+  body nav {
+    font-family: "Arial", "Times New Roman";
+    margin-left: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 2px inset black;
+    width: 75%; }
+    body nav > ul > li {
+      display: inline;
+      position: relative;
+      float: left;
+      padding-left: 15px; }
+      body nav > ul > li a {
+        color: white;
+        text-decoration: none; }
+      body nav > ul > li ul.sub-nav-list {
+        position: absolute;
+        display: none;
+        background-color: rgba(179, 94, 243, 0.9);
+        border-radius: 5px;
+        width: 200px;
+        list-style-type: none; }
+        body nav > ul > li ul.sub-nav-list li > a {
+          color: white;
+          text-decoration: none; }
+      body nav > ul > li:hover a {
+        color: #b35ef3;
+        text-decoration: underline; }
+      body nav > ul > li:hover ul {
+        display: block;
+        float: none; }
+      body nav > ul > li:hover ul > li > a:hover {
+        color: white;
+        text-decoration: underline; }
+
+body section {
+  float: left;
+  width: 70%; }
+  body section article {
+    border: 2px inset black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: "Consolas", "Times New Roman";
+    color: white; }
+    body section article header {
+      font-size: 16px; }
+    body section article p {
+      font-size: 90%; }
+    body section article footer {
+      text-align: right;
+      font-size: 80%; }
+      body section article footer a {
+        color: #b35ef3;
+        text-decoration: none; }
+        body section article footer a:hover {
+          text-decoration: underline; }
+
+aside {
+  float: left;
+  width: 20%;
+  margin: 10px;
+  color: white;
+  font-family: "Consolas", "Times New Roman"; }
+  aside > ul > h2 {
+    font-size: 14px; }
+  aside > ul > li {
+    border: 1px outset black;
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom: 25px;
+    font-size: 80%; }
+    aside > ul > li a {
+      color: #b35ef3;
+      text-decoration: none; }
+      aside > ul > li a:hover {
+        text-decoration: underline; }
+    aside > ul > li p > em, aside > ul > li strong {
+      color: #b35ef3; }
+    aside > ul > li > ul > li {
+      list-style-type: none;
+      background: url(images/li-dot.png) no-repeat;
+      background-position: 0 50%;
+      padding-left: 25px; }
+
+body footer {
+  clear: both;
+  color: white;
+  text-align: center;
+  padding: 10px 0 10px 0; }
+

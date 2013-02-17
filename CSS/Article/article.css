@@ -1,0 +1,80 @@
+﻿body,
+div,
+h1,
+header,
+img,
+p {
+  margin: 0;
+  padding: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body div#wrapper {
+  width: 960px;
+}
+body div#wrapper div {
+  width: 930px;
+  background: #de28ff;
+  background: -moz-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #de28ff), color-stop(75%, #f9dbff));
+  background: -webkit-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -o-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: -ms-linear-gradient(top, #de28ff 15%, #f9dbff 75%);
+  background: linear-gradient(to bottom, #de28ff 15%, #f9dbff 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@fromColor', endColorstr='@toColor', GradientType=0);
+  background-repeat: no-repeat;
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+  font-size: 16px;
+  margin: 25px;
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 15px 0px;
+}
+body div#wrapper div h1 {
+  font-size: 29px;
+  padding-left: 35px;
+}
+body div#wrapper div img {
+  position: relative;
+  margin: 35px 0;
+}
+body div#wrapper div .left-arrow {
+  float: left;
+}
+body div#wrapper div .right-arrow {
+  float: right;
+}
+body div#wrapper div p {
+  zoom: 1;
+}
+body div#wrapper div p:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body div#wrapper div p.postedby {
+  display: inline-block;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 5px 20px;
+  padding: 5px 15px;
+  position: relative;
+  zoom: 1;
+}
+body div#wrapper div p.postedby:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+body div#wrapper div p.info {
+  margin: 15px 35px;
+}

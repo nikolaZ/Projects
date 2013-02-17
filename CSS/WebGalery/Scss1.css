@@ -1,0 +1,93 @@
+/*variables*/
+/*mixins*/
+/*classes*/
+.clearfix, body ul {
+  zoom: 1; }
+  .clearfix:after, body ul:after {
+    display: block;
+    height: 0;
+    content: "";
+    clear: both; }
+
+.pos, body ul li {
+  display: inline;
+  position: relative;
+  float: left; }
+
+.size_thumb, body ul li, body ul li label img.thumb {
+  width: 180px;
+  height: 120px; }
+
+.size_full, section input[type="radio"]:checked + label span {
+  width: 700px;
+  height: 500px; }
+
+/*scss-css*/
+body {
+  background: white;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, white 0%, #31312e 85%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(85%, #31312e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, #31312e 85%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, white 0%, #31312e 85%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, white 0%, #31312e 85%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, white 0%, #31312e 85%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$fromColor', endColorstr='$toColor',GradientType=0 );
+  /* IE6-9 */ }
+  body ul li {
+    list-style-type: none;
+    padding: 5px; }
+    body ul li label img.thumb {
+      opacity: 0.5;
+      border-radius: 10px; }
+      body ul li label img.thumb:hover {
+        opacity: 0.7; }
+
+section input[type="radio"] {
+  display: none; }
+  section input[type="radio"]:checked {
+    display: inline-block;
+    display: none; }
+    section input[type="radio"]:checked + label #image1 {
+      background-size: 700px,500px;
+      background-image: url("images/img1.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+    section input[type="radio"]:checked + label #image2 {
+      background-size: 700px,500px;
+      background-image: url("images/img2.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+    section input[type="radio"]:checked + label #image3 {
+      background-size: 700px,500px;
+      background-image: url("images/img3.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+    section input[type="radio"]:checked + label #image4 {
+      background-size: 700px,500px;
+      background-image: url("images/img4.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+    section input[type="radio"]:checked + label #image5 {
+      background-size: 700px,500px;
+      background-image: url("images/img5.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+    section input[type="radio"]:checked + label #image6 {
+      background-size: 700px,500px;
+      background-image: url("images/img6.jpg");
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin-left: 43px; }
+

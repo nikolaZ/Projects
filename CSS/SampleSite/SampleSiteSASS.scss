@@ -1,0 +1,180 @@
+$sub-menu-backgroundcolor:rgba(179, 94, 243, 0.9);
+$sub-menu-width:200px;
+$menu-font:'Arial','Times New Roman';
+$menu-color:#FFF;
+$menu-hover-color:rgb(179, 94, 243);
+$menu-hover-decor:underline;
+$nav-border:2px inset #000;
+$article-border:2px inset #000;
+$article-font:'Consolas','Times New Roman';
+$article-color:#FFF;
+$article-link-color:rgb(179, 94, 243);
+$aside-border:1px outset #000;
+$aside-font:'Consolas','Times New Roman';
+$aside-color:#FFF;
+$aside-link-color:rgb(179, 94, 243);
+$aside-p-strong-color:rgb(179, 94, 243);
+$aside-list-item:url(images/li-dot.png) no-repeat;
+$reg-input-color:rgb(179, 94, 243);
+$input-border:1px solid #603382;
+$button-color:rgb(179, 94, 243);
+/*mixins*/
+@mixin linear-gradient($fromColor,$toColor,$from, $to,$repeat:no-repeat) {
+background: $fromColor; /* Old browsers */
+background: -moz-linear-gradient(top,  $fromColor $from, $toColor $to); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop($from,$fromColor), color-stop($to,$toColor)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  $fromColor $from,$toColor $to); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  $fromColor $from,$toColor $to); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  $fromColor $from,$toColor $to); /* IE10+ */
+background: linear-gradient(to bottom,  $fromColor $from,$toColor $to); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor', endColorstr='$toColor',GradientType=0 ); /* IE6-9 */
+background-repeat:$repeat;
+}
+/*classes*/
+.clearfix 
+{
+  zoom: 1;
+  &:after 
+  {
+    display: block; height: 0;
+    content: ""; clear: both;
+  }
+}
+.pos{
+display:inline;
+position:relative;
+float:left;
+}
+.size_thumb{
+width:180px;
+height:120px;
+}
+.size_full{
+width:700px;
+height:500px;
+}
+body{
+@include linear-gradient(#9215F2,#D191FC,80%,100%);
+
+header{
+	#header-container{
+	@extend .clearfix;
+		#logo-container{
+			float:left;
+			position:relative;}
+		#reg-form-container{
+			float:right;
+			position:relative;
+			right: 5%;
+			top: 50%;
+			& label{
+			color:white;}
+			& input{
+			background-color: $reg-input-color;
+			border-radius:10px;
+			border: $input-border;
+			margin:3px;
+			}
+			& button{
+			background-color:inherit;
+			border-radius:10px;
+			color:#FFF;
+			&:hover{
+			background-color: $button-color;
+			}}
+						}
+					}
+				}
+				nav{
+				font-family: $menu-font;
+				margin-left:20px;
+				margin-bottom:40px;
+				@extend .clearfix;
+				border-radius:10px;
+				border: $nav-border;
+				width:75%;
+				>ul{@extend .clearfix;}
+				>ul>li{
+				display:inline;
+				position:relative;
+				float:left;
+				padding-left:15px;
+				@extend .clearfix;
+				& a{color: $menu-color;
+					text-decoration:none;}
+			     & ul.sub-nav-list{
+				position: absolute;
+				display:none;
+                background-color: $sub-menu-backgroundcolor;
+                border-radius: 5px;
+				width: $sub-menu-width;
+				list-style-type:none;
+				@extend .clearfix;
+					& li>a{color: $menu-color;
+					text-decoration:none;}}			
+				&:hover{
+				& a{color: $menu-hover-color;
+					text-decoration:$menu-hover-decor;}
+				 & ul{display:block;
+				 float:none;}
+				 & ul>li>a:hover{
+				  color:$menu-color;
+				  text-decoration: $menu-hover-decor;}}
+		
+				}
+				}
+		}
+body{
+section{
+float:left;
+width:70%;
+	article	{
+	border: $article-border;
+	margin:10px;
+	padding:10px;
+	border-radius:25px;
+	font-family: $article-font;
+	color: $article-color;
+	& header{font-size:16px;}
+	& p{font-size:90%;}
+	& footer{
+	text-align:right;
+	font-size:80%;
+	 & a{
+	 color: $article-link-color;
+	 text-decoration:none;
+	 &:hover{
+	 text-decoration:underline;}}}}
+	}}
+aside{
+      float:left;
+	  width:20%;
+	  margin:10px;
+	  color: $article-color;
+	  font-family: $aside-font;
+	  & > ul >h2{font-size:14px;}
+	   & > ul >li{
+	    border: $aside-border;
+		border-radius:10px;
+		list-style-type:none;
+		padding:10px;
+		margin-bottom:25px;
+		font-size:80%;
+		& a{
+	 color: $aside-link-color;
+	 text-decoration:none;
+	 &:hover{
+	 text-decoration:underline;}}
+	 & p> em,strong{
+	 color: $aside-p-strong-color;}
+	 & > ul >li {
+	 list-style-type:none;
+	background: $aside-list-item;
+	background-position: 0 50%;
+	padding-left:25px;
+	 }}}
+body {footer{@extend .clearfix;
+clear:both;
+color:white;
+text-align:center;
+padding:10px 0 10px 0;}}

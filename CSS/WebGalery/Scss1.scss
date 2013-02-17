@@ -1,0 +1,91 @@
+/*variables*/
+$img1:"images/img1.jpg";
+$img2:"images/img2.jpg";
+$img3:"images/img3.jpg";
+$img4:"images/img4.jpg";
+$img5:"images/img5.jpg";
+$img6:"images/img6.jpg";
+/*mixins*/
+@mixin fullImg($image)
+{
+background-size:700px,500px;
+background-image:url($image);
+background-repeat:no-repeat;
+display:inline-block;
+margin-left:43px;
+}
+@mixin linear-gradient($fromColor,$toColor,$from, $to,$repeat:no-repeat) {
+background: $fromColor; /* Old browsers */
+background: -moz-linear-gradient(top,  $fromColor $from, $toColor $to); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop($from,$fromColor), color-stop($to,$toColor)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  $fromColor $from,$toColor $to); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  $fromColor $from,$toColor $to); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  $fromColor $from,$toColor $to); /* IE10+ */
+background: linear-gradient(to bottom,  $fromColor $from,$toColor $to); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$fromColor', endColorstr='$toColor',GradientType=0 ); /* IE6-9 */
+}
+/*classes*/
+.clearfix 
+{
+  zoom: 1;
+  &:after 
+  {
+    display: block; height: 0;
+    content: ""; clear: both;
+  }
+}
+.pos{
+display:inline;
+position:relative;
+float:left;
+}
+.size_thumb{
+width:180px;
+height:120px;
+}
+.size_full{
+width:700px;
+height:500px;
+}
+/*scss-css*/
+body
+{
+@include linear-gradient(#FFF,#31312e,0%,85%);
+ul{
+@extend .clearfix;
+		li{
+		list-style-type:none;
+		padding:5px;
+		@extend .size_thumb;
+		@extend .pos;
+		label img.thumb{
+		@extend .size_thumb;
+		opacity:0.5;
+		&:hover{opacity:0.7;}
+		border-radius:10px;
+		}
+	}
+	}
+}
+section input[type="radio"]{
+	display:none;
+	&:checked{
+		display:inline-block;
+		display:none;
+		
+		+ label span{@extend .size_full;}
+		+ label #image1{@include fullImg($img1);
+					}
+					+ label #image2{@include fullImg($img2);
+					}
+					+ label #image3{@include fullImg($img3);
+					}
+					+ label #image4{@include fullImg($img4);
+					}
+					+ label #image5{@include fullImg($img5);
+					}
+					+ label #image6{@include fullImg($img6);
+					}
+			}
+}
+
